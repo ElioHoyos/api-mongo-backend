@@ -5,6 +5,8 @@ const cors = require('cors');
 
 //requerir las rutas de categorias para la api rest
 const categoryRoutes = require('./routes/CategoryRoutes');
+//requerir las rutas de productos para la api rest
+const productRoutes = require('./routes/ProductRoutes');
 
 const app = express();
 
@@ -14,6 +16,7 @@ app.use(express.json());
 
 //Crear las rutas de la API REST
 app.use('/api/categorias', categoryRoutes);
+app.use('/api/productos', productRoutes);
 
 //Conexión a MongoDB y arranca el servidor
 mongoose
